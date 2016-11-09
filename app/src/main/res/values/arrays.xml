@@ -1,0 +1,1374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/*      Created by Roberto Mariani and Anna Berkovitch, 2015-2016
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+
+        You should have received a copy of the GNU General Public License
+        along with this program.  If not, see <http://www.gnu.org/licenses/>.*/-->
+<resources>
+    <string-array name="ListViewKeyName">
+        <item>原版S搜索和快速连接</item>
+        <item>下拉6键风格</item>
+        <item>下拉8键风格</item>
+        <item>自定义程序</item>
+    </string-array>
+    <string-array name="ListViewKeyValue">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="LockScreenTorchTimeoutName">
+        <item>15 秒</item>
+        <item>30 秒</item>
+        <item>1 分钟</item>
+        <item>2 分钟</item>
+        <item>10 分钟</item>
+    </string-array>
+    <string-array name="LockScreenTorchTimeoutValue">
+        <item>15000</item>
+        <item>30000</item>
+        <item>60000</item>
+        <item>120000</item>
+        <item>600000</item>
+    </string-array>
+    <string-array name="arrow_position_entries">
+        <item>文字右侧</item>
+        <item>文字左侧</item>
+    </string-array>
+    <string-array name="arrow_position_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="backup_restore_items">
+        <item>备份增强设置数据</item>
+        <item>还原增强设置数据</item>
+    </string-array>
+    <string-array name="battery_bar_entries">
+        <item>隐藏</item>
+        <item>显示</item>
+    </string-array>
+    <string-array name="battery_bar_style_entries">
+        <item>正常</item>
+        <item>中心镜像</item>
+    </string-array>
+    <string-array name="battery_bar_style_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="battery_bar_thickness_entries">
+        <item>1 dp</item>
+        <item>2 dp</item>
+        <item>3 dp</item>
+        <item>4 dp</item>
+    </string-array>
+    <string-array name="battery_bar_thickness_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="battery_bar_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="battery_icon_entries">
+        <item>官方电池</item>
+        <item>3M电池</item>
+        <item>隐藏电池</item>
+    </string-array>
+    <string-array name="battery_icon_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="call_delay_entries">
+        <item>不显示</item>
+        <item>持续0.5秒</item>
+        <item>持续1秒</item>
+        <item>持续2秒</item>
+        <item>持续3秒</item>
+        <item>持续5秒</item>
+        <item>持续10秒</item>
+    </string-array>
+    <string-array name="call_delay_values">
+        <item>0</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+        <item>10000</item>
+    </string-array>
+    <string-array name="carrier_entries">
+        <item>真实运营商</item>
+        <item>自定义</item>
+    </string-array>
+    <string-array name="carrier_entry_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="click_menu_entries">
+        <item>锁屏</item>
+        <item>显示关机菜单</item>
+        <item>返回</item>
+        <item>HOME 键</item>
+        <item>显示任务列表</item>
+        <item>菜单</item>
+        <item>音量加</item>
+        <item>音量减</item>
+        <item>拨号盘</item>
+        <item>音量切换：正常/振动/静音</item>
+        <item>结束当前进程</item>
+        <item>手电筒</item>
+        <item>屏幕截图</item>
+        <item>通知栏</item>
+        <item>无线网络</item>
+        <item>数据开关</item>
+        <item>蓝牙</item>
+        <item>照相机</item>
+        <item>清理内存</item>
+        <item>无</item>
+    </string-array>
+    <string-array name="click_menu_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>101</item>
+        <item>25</item>
+        <item>999</item>
+    </string-array>
+    <string-array name="clock_date_display_entries">
+        <item>不显示</item>
+        <item>较小</item>
+        <item>正常</item>
+    </string-array>
+    <string-array name="clock_date_display_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="clock_date_format_entries_values">
+        <item>dd/MM/yy</item>
+        <item>MM/dd/yy</item>
+        <item>yyyy-MM-dd</item>
+        <item>yyyy-dd-MM</item>
+        <item>dd-MM-yyyy</item>
+        <item>MM-dd-yyyy</item>
+        <item>MMM dd</item>
+        <item>MMM dd, yyyy</item>
+        <item>MMMM dd, yyyy</item>
+        <item>EEE</item>
+        <item>EEEE</item>
+        <item>EEE dd</item>
+        <item>EEE dd/MM</item>
+        <item>EEE MM/dd</item>
+        <item>EEE dd MMM</item>
+        <item>EEE dd MMMM</item>
+        <item>EEEE dd MMMM</item>
+        <item>EEE MMM dd</item>
+        <item>EEE MMMM dd</item>
+        <item>EEEE MMMM dd</item>
+        <item>EEEE dd/MM</item>
+        <item>EEEE MM/dd</item>
+    </string-array>
+    <string-array name="clock_date_position_entries">
+        <item>日期在时间前面</item>
+        <item>日期在时间后面</item>
+    </string-array>
+    <string-array name="clock_date_position_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="clock_font_style_entries">
+        <item>Clock font normal</item>
+        <item>Clock font italic</item>
+        <item>Clock font bold</item>
+        <item>Clock font bold italic</item>
+        <item>Clock font light</item>
+        <item>Clock font light italic</item>
+        <item>Clock font thin</item>
+        <item>Clock font thin italic</item>
+        <item>Clock font condensed</item>
+        <item>Clock font condensed italic</item>
+        <item>Clock font condensed bold</item>
+        <item>Clock font condensed bold italic</item>
+        <item>Clock font medium</item>
+        <item>Clock font medium italic</item>
+    </string-array>
+    <string-array name="clock_font_style_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="clock_style_entries">
+        <item>时间居左</item>
+        <item>时间居中</item>
+        <item>时间居右</item>
+        <item>时间隐藏</item>
+    </string-array>
+    <string-array name="clock_style_values">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="clock_weekday_entries">
+        <item>隐藏</item>
+        <item>较小</item>
+        <item>正常</item>
+    </string-array>
+    <string-array name="clock_weekday_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="crop_entries">
+        <item>裁剪居中</item>
+        <item>适应</item>
+        <item>平铺</item>
+    </string-array>
+    <string-array name="crop_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="custom_bg_type_entries">
+        <item>图片</item>
+        <item>渐变色</item>
+    </string-array>
+    <string-array name="custom_bg_type_values">
+        <item>0</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="custom_date">
+        <item>月 日, 星期,(官方)</item>
+        <item>星期 月 日, 年</item>
+        <item>年 星期 月 日</item>
+        <item>MM-d-yyyy</item>
+        <item>星期 m-d-yyyy</item>
+        <item>月-日-年</item>
+        <item>MM/d/yyyy</item>
+        <item>星期 MM/d/yyyy</item>
+    </string-array>
+    <string-array name="custom_date_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="custom_notice_bg_type_entries">
+        <item>图片</item>
+        <item>单色</item>
+        <item>渐变色</item>
+    </string-array>
+    <string-array name="custom_notice_bg_type_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="double_Launcher_entries">
+        <item>锁屏</item>
+        <item>显示关机菜单</item>
+        <item>返回</item>
+        <item>HOME 键</item>
+        <item>菜单</item>
+        <item>音量加</item>
+        <item>音量减</item>
+        <item>拨号盘</item>
+        <item>音量切换：正常/振动/静音</item>
+        <item>结束当前进程</item>
+        <item>手电筒</item>
+        <item>屏幕截图</item>
+        <item>通知栏</item>
+        <item>无线网络</item>
+        <item>数据开关</item>
+        <item>蓝牙</item>
+        <item>自定义程序</item>
+        <item>清理内存</item>
+        <item>无</item>
+    </string-array>
+    <string-array name="double_Launcher_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>22</item>
+        <item>25</item>
+        <item>999</item>
+    </string-array>
+    <string-array name="double_home_entries">
+        <item>返回</item>
+        <item>显示任务列表</item>
+        <item>菜单</item>
+        <item>音量加</item>
+        <item>音量减</item>
+        <item>拨号盘</item>
+        <item>音量切换：正常/振动/静音</item>
+        <item>结束当前进程</item>
+        <item>手电筒</item>
+        <item>屏幕截图</item>
+        <item>通知栏</item>
+        <item>无线网络</item>
+        <item>数据开关</item>
+        <item>蓝牙</item>
+        <item>照相机</item>
+        <item>自定义程序</item>
+        <item>清理内存</item>
+        <item>无</item>
+    </string-array>
+    <string-array name="double_home_values">
+        <item>2</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>101</item>
+        <item>21</item>
+        <item>25</item>
+        <item>999</item>
+    </string-array>
+    <string-array name="double_status_entries">
+        <item>锁屏</item>
+        <item>显示关机菜单</item>
+        <item>返回</item>
+        <item>HOME 键</item>
+        <item>菜单</item>
+        <item>音量加</item>
+        <item>音量减</item>
+        <item>拨号盘</item>
+        <item>音量切换：正常/振动/静音</item>
+        <item>结束当前进程</item>
+        <item>手电筒</item>
+        <item>屏幕截图</item>
+        <item>通知栏</item>
+        <item>无线网络</item>
+        <item>数据开关</item>
+        <item>蓝牙</item>
+        <item>自定义程序</item>
+        <item>清理内存</item>
+        <item>无</item>
+    </string-array>
+    <string-array name="double_status_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>28</item>
+        <item>25</item>
+        <item>999</item>
+    </string-array>
+    <string-array name="down_Launcher_entries">
+        <item>锁屏</item>
+        <item>显示关机菜单</item>
+        <item>返回</item>
+        <item>HOME 键</item>
+        <item>菜单</item>
+        <item>音量加</item>
+        <item>音量减</item>
+        <item>拨号盘</item>
+        <item>音量切换：正常/振动/静音</item>
+        <item>结束当前进程</item>
+        <item>手电筒</item>
+        <item>屏幕截图</item>
+        <item>通知栏</item>
+        <item>无线网络</item>
+        <item>数据开关</item>
+        <item>蓝牙</item>
+        <item>自定义程序</item>
+        <item>清理内存</item>
+        <item>无</item>
+    </string-array>
+    <string-array name="down_Launcher_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>26</item>
+        <item>25</item>
+        <item>999</item>
+    </string-array>
+    <string-array name="dsb_gradient_filter_entries">
+        <item>不显示</item>
+        <item>仅在桌面显示</item>
+        <item>仅在程序界面显示</item>
+        <item>所有界面显示</item>
+    </string-array>
+    <string-array name="dsb_gradient_filter_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="entries_status_bar_am_pm">
+        <item>隐藏</item>
+        <item>较小</item>
+        <item>正常</item>
+    </string-array>
+    <string-array name="festival_charging_effect_entries">
+        <item>无效果（纯文本）</item>
+        <item>季节</item>
+        <item>春天</item>
+        <item>夏天</item>
+        <item>秋天</item>
+        <item>冬天</item>
+    </string-array>
+    <string-array name="festival_charging_effect_values">
+        <item>0</item>
+        <item>5</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <array name="gif_bg_drawables">
+        <item>@drawable/z_expeand_gif</item>
+        <item>@drawable/z_expeand_gif_01</item>
+        <item>@drawable/z_expeand_gif_02</item>
+        <item>@drawable/z_expeand_gif_03</item>
+        <item>@drawable/z_expeand_gif_04</item>
+        <item>@drawable/z_expeand_gif_05</item>
+        <item>@drawable/z_expeand_gif_06</item>
+        <item>@drawable/z_expeand_gif_07</item>
+    </array>
+    <string-array name="gif_entries">
+        <item>隐藏</item>
+        <item>居中</item>
+        <item>底部</item>
+    </string-array>
+    <string-array name="gif_entries_valuse">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="gif_image_entries">
+        <item>飞舞蝴蝶</item>
+        <item>小黄人</item>
+        <item>小黄人</item>
+        <item>机器猫</item>
+        <item>机器猫</item>
+        <item>初音未来</item>
+        <item>小猫吹号</item>
+        <item>迪路兽</item>
+    </string-array>
+    <string-array name="gif_image_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="gradient_entries">
+        <item>从上到下</item>
+        <item>从下到上</item>
+        <item>从左到右</item>
+        <item>从右到左</item>
+    </string-array>
+    <string-array name="gradient_panel_number_entries">
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="gradient_panel_number_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="gradient_style_entries">
+        <item>水平从中间到两侧</item>
+        <item>从上到下</item>
+        <item>从下到上</item>
+        <item>双色水平两侧到中间</item>
+        <item>从左到右</item>
+    </string-array>
+    <string-array name="gradient_style_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="gradient_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="immersive_entries">
+        <item>显示</item>
+        <item>隐藏</item>
+    </string-array>
+    <string-array name="immersive_values">
+        <item>immersive.full</item>
+        <item>immersive.status=*</item>
+    </string-array>
+    <string-array name="incoming_call_flashlight_freqentries">
+        <item>300毫秒</item>
+        <item>500毫秒</item>
+        <item>1000毫秒</item>
+    </string-array>
+    <string-array name="incoming_call_flashlight_freqvalues">
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+    </string-array>
+    <string-array name="listview_animation_entries">
+        <item>关闭动画</item>
+        <item>左侧放大</item>
+        <item>右侧放大</item>
+        <item>中心缩放</item>
+        <item>淡入</item>
+        <item>顶部飞入</item>
+        <item>底部飞入</item>
+        <item>反向飞入</item>
+        <item>同向飞入</item>
+        <item>左侧移入</item>
+        <item>右侧移入</item>
+        <item>旋转进入</item>
+    </string-array>
+    <string-array name="listview_animation_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="listview_interpolator_entries">
+        <item>关闭</item>
+        <item>快速</item>
+        <item>慢速</item>
+        <item>匀速</item>
+        <item>极速</item>
+        <item>弹跳</item>
+        <item>极速弹跳</item>
+        <item>极速抖动</item>
+    </string-array>
+    <string-array name="listview_interpolator_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="lockscreen_font_style_entries">
+        <item>Android Clock</item>
+        <item>Wilhelm Kings sporGotisch</item>
+        <item>Android Clock Solid</item>
+        <item>Archibald</item>
+        <item>Cutive Mono</item>
+        <item>Choco Cooky</item>
+        <item>Cool Jazz</item>
+        <item>Rosemary</item>
+        <item>Ultima</item>
+        <item>Mr sheppards</item>
+        <item>BREAK IT</item>
+        <item>Docteur Atomic</item>
+        <item>Digital</item>
+        <item>Digital Bold</item>
+        <item>Hacked</item>
+        <item>Meow Kitty</item>
+        <item>Levibrush</item>
+        <item>Angel of Blood</item>
+        <item>Painterz</item>
+        <item>Sketch Gothic School</item>
+        <item>space age</item>
+        <item>Crack Babies</item>
+        <item>Lettau</item>
+        <item>Wallys Hand</item>
+        <item>Visitor TT1</item>
+        <item>Old Comedy</item>
+        <item>Sui Generis</item>
+        <item>Traktir Modern</item>
+        <item>Caviar Dreams</item>
+        <item>毛笔行书</item>
+        <item>孙过庭书谱体</item>
+        <item>迷你简姚体</item>
+        <item>博洋草书</item>
+        <item>博洋行书</item>
+        <item>迷你简幼线</item>
+        <item>华康娃娃</item>
+        <item>蚕燕隶书</item>
+        <item>迷你简燕翎</item>
+    </string-array>
+    <string-array name="lockscreen_font_style_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+    </string-array>
+    <string-array name="lockscreen_notif_entries">
+        <item>2个（官方）</item>
+        <item>3个</item>
+        <item>4个</item>
+        <item>5个</item>
+    </string-array>
+    <string-array name="lockscreen_notif_values">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="lockscreen_pattern_type_entries">
+        <item>经典</item>
+        <item>半色调</item>
+        <item>变形</item>
+        <item>多彩色</item>
+    </string-array>
+    <string-array name="lockscreen_pattern_type_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="lockscreen_type_entries">
+        <item>无</item>
+        <item>涟漪</item>
+        <item>灯光</item>
+        <item>流行色</item>
+        <item>水彩画</item>
+        <item>百叶窗</item>
+        <item>拉力</item>
+        <item>打水漂</item>
+        <item>水中墨水</item>
+        <item>抽象棱镜</item>
+        <item>闪闪发光的泡泡</item>
+        <item>彩色水滴</item>
+        <item>春天</item>
+        <item>夏天</item>
+        <item>秋天</item>
+        <item>冬天</item>
+        <item>季节</item>
+    </string-array>
+    <string-array name="lockscreen_type_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>10</item>
+        <item>11</item>
+        <item>14</item>
+        <item>15</item>
+        <item>81</item>
+        <item>82</item>
+        <item>83</item>
+        <item>84</item>
+        <item>85</item>
+    </string-array>
+    <string-array name="long_back_entries">
+        <item>锁屏</item>
+        <item>显示关机菜单</item>
+        <item>返回</item>
+        <item>HOME 键</item>
+        <item>显示任务列表</item>
+        <item>菜单</item>
+        <item>音量加</item>
+        <item>音量减</item>
+        <item>拨号盘</item>
+        <item>音量切换：正常/振动/静音</item>
+        <item>结束当前进程</item>
+        <item>手电筒</item>
+        <item>屏幕截图</item>
+        <item>通知栏</item>
+        <item>无线网络</item>
+        <item>数据开关</item>
+        <item>蓝牙</item>
+        <item>照相机</item>
+        <item>自定义程序</item>
+        <item>清理内存</item>
+        <item>无</item>
+    </string-array>
+    <string-array name="long_back_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>101</item>
+        <item>19</item>
+        <item>25</item>
+        <item>999</item>
+    </string-array>
+    <string-array name="long_home_entries">
+        <item>返回</item>
+        <item>显示任务列表</item>
+        <item>菜单</item>
+        <item>音量加</item>
+        <item>音量减</item>
+        <item>拨号盘</item>
+        <item>音量切换：正常/振动/静音</item>
+        <item>结束当前进程</item>
+        <item>手电筒</item>
+        <item>屏幕截图</item>
+        <item>通知栏</item>
+        <item>无线网络</item>
+        <item>数据开关</item>
+        <item>蓝牙</item>
+        <item>照相机</item>
+        <item>自定义程序</item>
+        <item>清理内存</item>
+        <item>无</item>
+    </string-array>
+    <string-array name="long_home_values">
+        <item>2</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>101</item>
+        <item>20</item>
+        <item>25</item>
+        <item>999</item>
+    </string-array>
+    <string-array name="long_menu_entries">
+        <item>锁屏</item>
+        <item>显示关机菜单</item>
+        <item>返回</item>
+        <item>HOME 键</item>
+        <item>显示任务列表</item>
+        <item>菜单</item>
+        <item>音量加</item>
+        <item>音量减</item>
+        <item>拨号盘</item>
+        <item>音量切换：正常/振动/静音</item>
+        <item>结束当前进程</item>
+        <item>手电筒</item>
+        <item>屏幕截图</item>
+        <item>通知栏</item>
+        <item>无线网络</item>
+        <item>数据开关</item>
+        <item>蓝牙</item>
+        <item>照相机</item>
+        <item>自定义程序</item>
+        <item>清理内存</item>
+        <item>无</item>
+    </string-array>
+    <string-array name="long_menu_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>101</item>
+        <item>18</item>
+        <item>25</item>
+        <item>999</item>
+    </string-array>
+    <string-array name="quick_launch_buttons_entries">
+        <item>4个快捷应用</item>
+        <item>5个快捷应用</item>
+        <item>6个快捷应用</item>
+        <item>7个快捷应用</item>
+        <item>8个快捷应用</item>
+        <item>9个快捷应用</item>
+        <item>10个快捷应用</item>
+    </string-array>
+    <string-array name="quick_launch_buttons_values">
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="quick_settings_active_num_columns_entries">
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+    </string-array>
+    <string-array name="quick_settings_active_num_columns_values">
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+    </string-array>
+    <string-array name="quick_settings_num_columns_entries">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="quick_settings_num_columns_values">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="sb_gradient_style_entries">
+        <item>径向</item>
+        <item>垂直从顶部到底部</item>
+        <item>垂直从中间扩散</item>
+        <item>水平从左到右扩散</item>
+        <item>水平从中间扩散</item>
+    </string-array>
+    <string-array name="sb_gradient_style_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="shape_entries">
+        <item>官方</item>
+        <item>圆角</item>
+    </string-array>
+    <string-array name="shape_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="signal_entries">
+        <item>显示4格</item>
+        <item>显示5格</item>
+        <item>显示6格</item>
+    </string-array>
+    <string-array name="signal_position_entries">
+        <item>居右</item>
+        <item>居左</item>
+    </string-array>
+    <string-array name="signal_position_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="signal_values">
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="sweep_keyguard_action">
+        <item>锁屏</item>
+        <item>显示关机菜单</item>
+        <item>音量切换：正常/振动/静音</item>
+        <item>手电筒</item>
+        <item>屏幕截图</item>
+        <item>照相机</item>
+        <item>无</item>
+    </string-array>
+    <string-array name="sweep_keyguard_values">
+        <item>0</item>
+        <item>1</item>
+        <item>10</item>
+        <item>12</item>
+        <item>13</item>
+        <item>101</item>
+        <item>999</item>
+    </string-array>
+    <string-array name="sweep_left_action">
+        <item>锁屏</item>
+        <item>显示关机菜单</item>
+        <item>返回</item>
+        <item>HOME 键</item>
+        <item>显示任务列表</item>
+        <item>菜单键</item>
+        <item>音量加</item>
+        <item>音量减</item>
+        <item>拨号盘</item>
+        <item>音量切换：正常/振动/静音</item>
+        <item>结束当前进程</item>
+        <item>手电筒</item>
+        <item>照相机</item>
+        <item>屏幕截图</item>
+        <item>自定义程序</item>
+        <item>无</item>
+    </string-array>
+    <string-array name="sweep_left_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>101</item>
+        <item>13</item>
+        <item>23</item>
+        <item>999</item>
+    </string-array>
+    <string-array name="sweep_right_action">
+        <item>锁屏</item>
+        <item>显示关机菜单</item>
+        <item>返回</item>
+        <item>HOME 键</item>
+        <item>显示任务列表</item>
+        <item>菜单键</item>
+        <item>音量加</item>
+        <item>音量减</item>
+        <item>拨号盘</item>
+        <item>音量切换：正常/振动/静音</item>
+        <item>结束当前进程</item>
+        <item>手电筒</item>
+        <item>照相机</item>
+        <item>屏幕截图</item>
+        <item>自定义程序</item>
+        <item>无</item>
+    </string-array>
+    <string-array name="sweep_right_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>101</item>
+        <item>13</item>
+        <item>24</item>
+        <item>999</item>
+    </string-array>
+    <string-array name="system_background_gradient_entries">
+        <item>中心扩散渐变</item>
+        <item>竖直由上向下渐变</item>
+        <item>竖直三段渐变</item>
+        <item>水平三段渐变</item>
+    </string-array>
+    <string-array name="system_background_gradient_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="test_list_entries">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>"Let's make twenty"</item>
+    </string-array>
+    <string-array name="test_list_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="theme_items">
+        <item>浅色主题</item>
+        <item>深色主题</item>
+    </string-array>
+    <array name="thumbnail_drawables">
+        <item>@drawable/icon_6</item>
+        <item>@drawable/icon_5</item>
+    </array>
+    <string-array name="thumbnail_items">
+        <item>Icon 1</item>
+        <item>Icon 2</item>
+    </string-array>
+    <string-array name="thumbnail_values">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <array name="toggle_bg_drawables">
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_circle</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_circle_dish</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_circle_dome</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_square_dome</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_square_metal</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_square_glass</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_square</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_transformers</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_square1</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_10</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_11</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_12</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_13</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_14</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_15</item>
+    </array>
+    <string-array name="toggle_buttons_background_entries">
+        <item>官方</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="toggle_buttons_background_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="traffic_state_items">
+        <item>不显示</item>
+        <item>仅上传</item>
+        <item>仅下载</item>
+        <item>双行网速</item>
+    </string-array>
+    <string-array name="traffic_state_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="traffic_style_entries">
+        <item>正常</item>
+        <item>粗体</item>
+        <item>斜体</item>
+        <item>粗斜体</item>
+    </string-array>
+    <string-array name="traffic_style_entry_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="traffic_update_entries">
+        <item>500 ms</item>
+        <item>1000 ms</item>
+        <item>1500 ms</item>
+        <item>2000 ms</item>
+    </string-array>
+    <string-array name="traffic_update_values">
+        <item>500</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+    </string-array>
+    <string-array name="traffic_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="transition_effect">
+        <item>模拟瀑布流注</item>
+        <item>立方</item>
+        <item>水立方</item>
+        <item>旋转木马</item>
+        <item>缩放</item>
+        <item>平滑</item>
+        <item>平滑不覆盖</item>
+        <item>卡片堆</item>
+        <item>传递</item>
+        <item>折叠</item>
+        <item>消逝</item>
+        <item>阴影</item>
+        <item>覆盖卡片堆</item>
+    </string-array>
+    <string-array name="transition_effect_values">
+        <item>0</item>
+        <item>1</item>
+        <item>4</item>
+        <item>5</item>
+        <item>7</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+    </string-array>
+    <string-array name="up_Launcher_entries">
+        <item>锁屏</item>
+        <item>显示关机菜单</item>
+        <item>返回</item>
+        <item>HOME 键</item>
+        <item>菜单</item>
+        <item>音量加</item>
+        <item>音量减</item>
+        <item>拨号盘</item>
+        <item>音量切换：正常/振动/静音</item>
+        <item>结束当前进程</item>
+        <item>手电筒</item>
+        <item>屏幕截图</item>
+        <item>通知栏</item>
+        <item>无线网络</item>
+        <item>数据开关</item>
+        <item>蓝牙</item>
+        <item>自定义程序</item>
+        <item>清理内存</item>
+        <item>无</item>
+    </string-array>
+    <string-array name="up_Launcher_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>27</item>
+        <item>25</item>
+        <item>999</item>
+    </string-array>
+    <string-array name="values_status_bar_am_pm">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="volbtn_action_entries">
+        <item>暂停</item>
+        <item>播放</item>
+        <item>停止</item>
+        <item>上一曲</item>
+        <item>下一曲</item>
+    </string-array>
+    <string-array name="volbtn_action_values">
+        <item>127</item>
+        <item>126</item>
+        <item>86</item>
+        <item>88</item>
+        <item>87</item>
+    </string-array>
+    <string-array name="volbtn_timeout_entries">
+        <item>100毫秒</item>
+        <item>150毫秒</item>
+        <item>200毫秒</item>
+        <item>250毫秒</item>
+        <item>300毫秒</item>
+        <item>350毫秒</item>
+        <item>400毫秒</item>
+        <item>450毫秒</item>
+        <item>500毫秒</item>
+    </string-array>
+    <string-array name="volbtn_timeout_values">
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+        <item>250</item>
+        <item>300</item>
+        <item>350</item>
+        <item>400</item>
+        <item>450</item>
+        <item>500</item>
+    </string-array>
+</resources>

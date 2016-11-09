@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceScreen android:title="按键功能" android:summary="Home、菜单、返回设置">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Home键">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="启用Home键唤醒屏幕" android:key="home_wake_up" android:defaultValue="true" android:summaryOn="已启用" android:summaryOff="已禁用" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/long_home_entries" android:title="长按HOME键功能" android:key="long_press_home" android:summary="s%" android:entryValues="@array/long_home_values" app:dependentValue="20" />
+            <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference android:title="长按HOME键自定义程序" android:key="long_press_home_app" android:summary="长按HOME键功能选择自定义程序" app:intentSeparator="\##" app:showSearch="true" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/double_home_entries" android:title="双击HOME键功能" android:key="double_tap_home" android:summary="s%" android:entryValues="@array/double_home_values" app:dependentValue="21" />
+            <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference android:title="双击HOME键自定义程序" android:key="double_tap_home_app" android:summary="双击HOME键功能选择自定义程序" app:intentSeparator="\##" app:showSearch="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="任务键">
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/long_menu_entries" android:title="长按任务键功能" android:key="long_press_menu" android:summary="s%" android:entryValues="@array/long_menu_values" app:dependentValue="18" />
+            <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference android:title="长按任务键自定义程序" android:key="long_press_menu_app" android:summary="长按任务键功能选择自定义程序" app:intentSeparator="\##" app:showSearch="true" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/click_menu_entries" android:title="短按任务键功能" android:key="short_press_menu" android:summary="s%" android:entryValues="@array/click_menu_values" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="返回键">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="长按功能转换" android:key="db_multi_window_enabled" android:defaultValue="true" android:summaryOn="多窗口模式" android:summaryOff="自定义模式" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/long_back_entries" android:title="长按返回键功能" android:key="long_press_back" android:summary="s%" android:entryValues="@array/long_back_values" app:dependentValue="19" />
+            <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference android:title="长按返回键自定义程序" android:key="long_press_Back_app" android:summary="长按返回键功能选择自定义程序" app:intentSeparator="\##" app:showSearch="true" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="动作设置" android:summary="手势、状态栏">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="锁屏亮屏状态">
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/sweep_keyguard_action" android:title="自定义手掌左滑功能" android:key="sweep_right_keyguard" android:summary="s%" android:entryValues="@array/sweep_keyguard_values" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/sweep_keyguard_action" android:title="自定义手掌右滑功能" android:key="sweep_left_keyguard" android:summary="s%" android:entryValues="@array/sweep_keyguard_values" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="未锁屏状态">
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/sweep_left_action" android:title="自定义手掌左滑功能" android:key="sweep_left" android:summary="s%" android:entryValues="@array/sweep_left_values" app:dependentValue="23" />
+            <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference android:title="手掌左滑运行自定义应用" android:key="sweep_left_app" android:summary="手掌左滑运行自定义应用" app:intentSeparator="\##" app:showSearch="true" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/sweep_right_action" android:title="自定义手掌右滑功能" android:key="sweep_right" android:summary="s%" android:entryValues="@array/sweep_right_values" app:dependentValue="24" />
+            <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference android:title="手掌右滑运行自定义应用" android:key="sweep_right_app" android:summary="手掌右滑运行自定义应用" app:intentSeparator="\##" app:showSearch="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="双击状态栏">
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/double_status_entries" android:title="双击状态栏功能" android:key="double_tap_status_bar" android:summary="s%" android:entryValues="@array/double_status_values" app:dependentValue="28" />
+            <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference android:title="双击状态栏自定义程序" android:key="double_tap_statusbar_app" android:summary="双击状态栏功能选择自定义程序" app:intentSeparator="\##" app:showSearch="true" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+</PreferenceScreen>

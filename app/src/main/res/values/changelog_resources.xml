@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Do not forget to include this in any locale specific folders for translation-->
+
+    <!--In the following array put your changelog items
+    Take as many lines as you need.
+    Add as many items as you want or delete some if those are too many
+    This order is how they will appear in the dialog
+    Make any order you want from top to bottom-->
+    <string-array name="changelog_items">
+        <item>基于F大官方固件N9100ZCS1DPJ1修改增强</item>
+        <item>增强设置基于V2.1源码编译而成</item>
+        <item>电话功能和颜色设置</item>
+        <item>UI多种自定义设置</item>
+        <item>添加N5、N7部分软件</item>
+        <item>天气农历</item>
+        <item>主题商店为破解版，一定不要升级</item>
+        <item>联系人赋予读取存储的权限，否则选择背景图片会造成FC</item>
+        <item>其他修改不一一介绍</item>
+        <item>无需捐赠，无需感谢</item>
+        <item>如果觉得可以加个分即可</item>
+        <item>如有问题去帖子回复</item>
+        <item>若有时间会帮助解决</item>
+        <item>祝生活愉快</item>
+    </string-array>
+
+    <!--This will be the dialog title.
+    Put your own rom version and name.
+    Have fun-->
+    <string name="rom_version_for_changelog">SM-N9100国行固件</string>
+
+
+</resources>

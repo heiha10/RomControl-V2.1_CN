@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="音量键设置">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="耳机音量过大警告" android:key="volume_warning_toggle" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="锁屏手电筒" android:key="torchlight_enable" android:summary="在屏幕锁定时长按音量上键开启手电筒，向下关闭" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/LockScreenTorchTimeoutName" android:title="锁屏手电筒超时" android:key="torchlight_timeout" android:summary="手电筒自动关闭时间设定" android:dependency="torchlight_enable" android:entryValues="@array/LockScreenTorchTimeoutValue" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="音量切歌" android:key="volbtn_music_controls" android:defaultValue="false" android:summaryOn="打开" android:summaryOff="禁止" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:persistent="true" android:entries="@array/volbtn_timeout_entries" android:title="按键延迟" android:key="volbtn_timeout" android:summary="选择延迟时间" android:dependency="volbtn_music_controls" android:defaultValue="300" android:entryValues="@array/volbtn_timeout_values" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:persistent="true" android:entries="@array/volbtn_action_entries" android:title="音量加功能" android:key="volbtn_vol_up" android:summary="选择功能" android:dependency="volbtn_music_controls" android:entryValues="@array/volbtn_action_values" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:persistent="true" android:entries="@array/volbtn_action_entries" android:title="音量减功能" android:key="volbtn_vol_down" android:summary="选择功能" android:dependency="volbtn_music_controls" android:entryValues="@array/volbtn_action_values" />
+    </PreferenceCategory>
+</PreferenceScreen>

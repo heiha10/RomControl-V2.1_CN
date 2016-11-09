@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/*      Created by Roberto Mariani and Anna Berkovitch, 2015-2016
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+
+        You should have received a copy of the GNU General Public License
+        along with this program.  If not, see <http://www.gnu.org/licenses/>.*/-->
+<resources>
+
+
+    <!--Contact info arrays-->
+
+    <!--In this array you will put the icons for contact information,
+    for example xda icon for your xda thread, site icon for your site, facebook icon and so on-->
+    <array name="about_contact_us_drawables">
+        <item>@drawable/i_logo</item>
+    </array>
+    <string-array name="about_contact_us_links">
+        <item></item>
+    </string-array>
+    <string-array name="about_contact_us_text">
+        <item>一个菜鸟</item>
+    </string-array>
+    <array name="about_credits_drawables">
+        <item>@drawable/fcorn</item>
+        <item>@drawable/aurora</item>
+        <item>@drawable/uncl</item>
+        <item>@drawable/fenghen</item>
+        <item>@drawable/samsung</item>
+        <item>@drawable/galaxy</item>
+        <item>@drawable/icon_5</item>
+    </array>
+    <string-array name="about_credits_links">
+        <item>http://weibo.com/u/2270247922</item>
+        <item>http://weibo.com/AuroraROM</item>
+        <item>http://www.galaxyclub.cn/friendgalaxy/event/mypost/2095997</item>
+        <item>http://weibo.com/fenghen001</item>
+        <item>http://bbs.52samsung.com/forum.php</item>
+        <item>http://www.galaxyclub.cn/</item>
+        <item>http://bbs.gfan.com/forum-1545-1.html</item>
+    </string-array>
+    <string-array name="about_credits_names">
+        <item>"fcorn
+三星精简Romer超快发布者"</item>
+        <item>"极光团队
+著名第三方Rom开发团队"</item>
+        <item>"台湾小U哥
+诸多三星修改教程发布者"</item>
+        <item>"风痕
+知名三星Rom开发者"</item>
+        <item>"52三星论坛
+三星手机技术论坛"</item>
+        <item>"盖乐世社区
+三星官方论坛"</item>
+        <item>"其他大神和教程
+飞龙、Z大、家鸽等大神网友表示感谢"</item>
+    </string-array>
+    <array name="about_team_drawables">
+        <item>@drawable/daxgirl</item>
+        <item>@drawable/wuby986</item>
+        <item>@drawable/tdunham</item>
+        <item>@drawable/asc1977</item>
+        <item>@drawable/icon_6</item>
+    </array>
+    <string-array name="about_team_links">
+        <item>http://forum.xda-developers.com/android/general/source-code-6thgear-romcontrol-v2-devs-t3411916</item>
+        <item>http://forum.xda-developers.com/android/general/source-code-6thgear-romcontrol-v2-devs-t3411916</item>
+        <item>http://forum.xda-developers.com/showthread.php?t=2799050</item>
+        <item>http://forum.xda-developers.com/galaxy-s6/samsung-galaxy-s-6--s-6-edge-unified-development/devs-helpingd-devs-t3321679</item>
+        <item>http://forum.xda-developers.com</item>
+    </string-array>
+    <string-array name="about_team_names">
+        <item>"daxgirl
+增强设置开发者，修改教程发布者"</item>
+        <item>"wuby986
+增强设置开发者"</item>
+        <item>"tdunham
+XDA 三星固件修改教程发布者和搜集者"</item>
+        <item>"asc1977
+三星S6 6.0修改教程搜集者"</item>
+        <item>"其他
+XDA 其他教程和软件发布者"</item>
+    </string-array>
+</resources>

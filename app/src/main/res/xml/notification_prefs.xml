@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceScreen android:title="下拉背景和顶部设置" android:summary="时间、背景颜色">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="顶部颜色">
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="顶部背景颜色" android:key="pulldown_header_color" android:summary="官方颜色#ff00a5c4" android:defaultValue="\#ff00a5c4" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="右侧颜色" android:key="header_right_button_color" android:summary="文字和图标" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="时间/日期" android:summary="时钟/文字颜色、格式">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="显示农历" android:key="pulldown_china_date" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="时钟颜色" android:key="pulldown_time_color" android:summary="下拉时钟颜色" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="日期颜色" android:key="pulldown_date_color" android:summary="下拉日期颜色" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/custom_date" android:title="日期格式" android:key="custom_date" android:summary="选择日期格式" android:defaultValue="0" android:entryValues="@array/custom_date_values" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="下拉壁纸">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="下拉壁纸、颜色" android:key="enable_gear_custom_bg" android:defaultValue="false" android:summaryOn="启用" android:summaryOff="禁用" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/custom_notice_bg_type_entries" android:title="背景类型" android:key="gear_custom_bg_type" android:summary="选择类型" android:defaultValue="0" android:entryValues="@array/custom_notice_bg_type_values" />
+            <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference android:title="选择图片" android:key="gear_bg_image_uri" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/crop_entries" android:title="壁纸显示类型" android:key="gear_bg_crop_type" android:defaultValue="0" android:entryValues="@array/crop_values" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="一级颜色" android:key="gear_bg_primary_color" android:dependency="gear_custom_bg_type" android:defaultValue="\#00000000" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="二级颜色" android:key="gear_second_gradient_color" android:dependency="gear_custom_bg_type" android:defaultValue="\#00000000" app:dependentValue="2" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/gradient_entries" android:title="渐变方向" android:key="gear_bg_gradient_orientation" android:dependency="gear_custom_bg_type" android:defaultValue="0" android:entryValues="@array/gradient_values" app:dependentValue="2" />
+            <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="背景透明度" android:key="gear_bg_opacity" android:defaultValue="255" app:minValue="0" app:maxValue="255" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/gif_entries" android:title="GIF动态壁纸" android:key="turn_on_gif" android:summary="选择位置" android:defaultValue="0" android:entryValues="@array/gif_entries_valuse" />
+            <com.wubydax.romcontrol.v2.prefs.ThumbnailListPreference android:title="动态壁纸类型" android:key="gif_image_style" android:summary="选择图片" app:packageNameToKill="com.android.systemui" app:isSilent="false" app:drawableArray="@array/gif_bg_drawables" app:entryList="@array/gif_image_entries" app:entryValuesList="@array/gif_image_values" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="下拉快捷面板" android:summary="亮度条、快捷键、快速连接等等设置">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="通知面板 快捷键">
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="快捷键背景颜色" android:key="pulldown_quick_bg_color" android:summary="官方颜色#ff00a5c4" android:defaultValue="\#ff00a5c4" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/quick_settings_num_columns_entries" android:title="显示快捷开关图标数量" android:key="xiala_quick_panle_number" android:defaultValue="5" android:entryValues="@array/quick_settings_num_columns_values" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/quick_settings_active_num_columns_entries" android:title="左滑可用快捷按键数量" android:key="notification_panel_active_number_of_apps" android:defaultValue="5" android:entryValues="@array/quick_settings_active_num_columns_values" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="快捷键图标打开颜色" android:key="toggle_icon_on_color" android:summary="官方颜色#ffdaf400" android:defaultValue="\#ffdaf400" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="快捷键图标关闭颜色" android:key="toggle_icon_off_color" android:summary="官方颜色#99fafafa" android:defaultValue="\#99fafafa" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ThumbnailListPreference android:title="快捷键图标背景类型" android:key="toggle_buttons_background_style" android:summary="选择背景" app:drawableArray="@array/toggle_bg_drawables" app:entryList="@array/toggle_buttons_background_entries" app:entryValuesList="@array/toggle_buttons_background_values" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="快捷键图标背景颜色" android:key="toggle_buttons_background_color" android:summary="选择颜色" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="显示/隐藏快捷键文字" android:key="quick_panel_text_visible" android:summaryOn="显示快捷键文字" android:summaryOff="隐藏快捷键文字" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="快捷键文字颜色" android:key="quick_panel_text_color" android:summary="选择颜色" android:dependency="quick_panel_text_visible" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="WIFI连接文字颜色" android:key="toggle_connect_text_color" android:summary="官方颜色#ffdaf400" android:defaultValue="\#ffdaf400" alphaSlider="true" hexValue="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="下拉亮度调节设置">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="亮度调节框" android:key="notification_panel_brightness_adjustment" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="亮度调节框背景颜色" android:key="brightness_bg_color" android:summary="官方颜色#ff00a5c4" android:dependency="notification_panel_brightness_adjustment" android:defaultValue="\#ff00a5c4" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="调节亮度时背景颜色" android:key="brightness_pressed_color" android:summary="官方颜色#ff00a5c4" android:dependency="notification_panel_brightness_adjustment" android:defaultValue="\#ff00a5c4" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="左侧图标颜色" android:key="brightness_icon_color" android:summary="选择颜色" android:dependency="notification_panel_brightness_adjustment" android:defaultValue="\#ccfafafa" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="自动文本颜色" android:key="brightness_label_color" android:summary="选择颜色" android:dependency="notification_panel_brightness_adjustment" android:defaultValue="\#FFFFFFFF" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="亮度条前景色" android:key="brightness_slider_progress_color" android:summary="官方颜色#ffdaf400" android:dependency="notification_panel_brightness_adjustment" android:defaultValue="\#ffdaf400" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="亮度条背景色" android:key="brightness_slider_progress_bg_color" android:summary="官方颜色#ff7bcddd" android:dependency="notification_panel_brightness_adjustment" android:defaultValue="\#ff7bcddd" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="小圆点颜色" android:key="brightness_slider_thumb_color" android:summary="官方颜色#ffdaf400" android:dependency="notification_panel_brightness_adjustment" android:defaultValue="\#ffdaf400" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="自动模式数字颜色" android:key="brightness_slider_digit_text_color" android:summary="选择颜色" android:dependency="notification_panel_brightness_adjustment" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="亮度条右内存清理" android:key="pull_mem_clean_icon" android:defaultValue="false" android:summaryOn="显示" android:summaryOff="隐藏" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="内存清理颜色" android:key="pull_mem_clean_color" android:summary="选择颜色" android:dependency="pull_mem_clean_icon" android:defaultValue="\#FF33B5E6" alphaSlider="true" hexValue="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="双卡选择框设置">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="双卡选择框" android:key="shuangka_layout" android:defaultValue="false" android:summaryOn="显示" android:summaryOff="隐藏" android:disableDependentsState="false" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="优先卡文本颜色" android:key="pull_selsim_text_color" android:summary="选择颜色" android:dependency="shuangka_layout" android:defaultValue="\#ffbbff00" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="非优先卡文本颜色" android:key="pull_unselsim_text_color" android:summary="选择颜色" android:dependency="shuangka_layout" android:defaultValue="\#FFFFFFFF" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="背景颜色" android:key="shuangka_bg_color" android:summary="官方颜色#ff247c97" android:dependency="shuangka_layout" android:defaultValue="\#ff247c97" alphaSlider="true" hexValue="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="下拉按键设置">
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="快速搜索背景颜色" android:key="quick_connect_sfinder_bg_color" android:summary="官方颜色#ff247c97" android:defaultValue="\#ff247c97" alphaSlider="true" hexValue="true" />
+            <PreferenceScreen android:title="下拉按键" android:summary="样式选择">
+                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="S搜索" android:key="sfind_qconnect_visible" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" app:packageNameToKill="com.android.systemui" app:isSilent="false" />
+                <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/ListViewKeyName" android:title="下拉按键风格" android:key="eight_key" android:summary="选择下拉风格" android:entryValues="@array/ListViewKeyValue" />
+                <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/quick_launch_buttons_entries" android:title="快捷应用数量" android:key="quick_launch_vis_buttons" android:dependency="eight_key" android:defaultValue="5" android:entryValues="@array/quick_launch_buttons_values" app:packageNameToKill="com.android.systemui" app:isSilent="false" app:dependentValue="3" />
+                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="显示名称" android:key="quick_launch_text_visible" android:dependency="eight_key" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" app:packageNameToKill="com.android.systemui" app:isSilent="false" app:dependentValue="3" />
+                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="显示快捷应用分隔线" android:key="quick_launch_show_devider" android:dependency="eight_key" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" app:packageNameToKill="com.android.systemui" app:isSilent="false" app:dependentValue="3" />
+                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="允许添加快捷应用" android:key="quick_launch_show_add" android:dependency="eight_key" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" app:packageNameToKill="com.android.systemui" app:isSilent="false" app:dependentValue="3" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="设置快捷应用背景顏色" android:key="quick_launch_background_color" android:summary="选择颜色" android:dependency="eight_key" android:defaultValue="\#00000000" app:packageNameToKill="com.android.systemui" app:isSilent="false" app:dependentValue="3" alphaSlider="true" hexValue="true" />"
+<com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="名称文字颜色" android:key="quick_launch_text_color" android:summary="选择颜色" android:dependency="eight_key" android:defaultValue="\#ffffffff" app:packageNameToKill="com.android.systemui" app:isSilent="false" app:dependentValue="3" alphaSlider="true" hexValue="true" />"
+</PreferenceScreen>
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="下拉通知项设置" android:summary="背景、颜色">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="下拉通知项目">
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/shape_entries" android:title="通知栏背景形状" android:key="notification_background_form" android:defaultValue="0" android:entryValues="@array/shape_values" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="背景颜色" android:key="notification_bg_color" android:summary="选择颜色" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="锁屏通知项目背景颜色" android:key="keyguard_notice_bg_color" android:summary="选择颜色" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="左侧图标背景颜色" android:key="notif_icon_color" android:summary="选择颜色" android:defaultValue="\#ff6599b1" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="禁用通知栏文字颜色调节" android:key="link_noti_text_color_enable" android:defaultValue="true" android:summaryOn="官方颜色" android:summaryOff="自定义颜色" android:disableDependentsState="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="通知项一、三行文字、图标颜色" android:key="link_noti_text_color" android:summary="选择颜色" android:dependency="link_noti_text_color_enable" android:defaultValue="\#ff000000" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="通知项第二行文字颜色" android:key="link_noti_sec_text_color" android:summary="选择颜色" android:dependency="link_noti_text_color_enable" android:defaultValue="\#ff000000" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="通知项时间颜色" android:key="link_noti_time_color" android:summary="选择颜色" android:dependency="link_noti_text_color_enable" android:defaultValue="\#ff000000" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="清除" android:key="clear_button_text_color" android:summary="清除按钮和文字" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="设备信息">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="显示设备信息" android:key="device_info_visibility" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="名称颜色" android:key="gear_info_names_color" android:summary="选择颜色" android:defaultValue="\#ffffffff" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="信息颜色" android:key="gear_info_values_color" android:summary="选择颜色" android:defaultValue="\#ffffffff" />
+            <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="手机型号" android:key="device_model" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+            <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="系统版本" android:key="device_android_version" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+            <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="固件版本" android:key="device_build_version" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+            <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="剩余电量" android:key="device_battery_level" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+            <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="网络制式" android:key="device_network_name" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+            <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="WIFI 信息" android:key="device_wifi_info" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+            <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="闹钟信息" android:key="device_next_alarm" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+            <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="开机时长" android:key="device_up_time" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="运营商设置" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="运营商开关" android:key="carrier_label_visibility" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="文本颜色" android:key="carrier_label_text_color" android:summary="选择颜色" android:dependency="carrier_label_visibility" android:defaultValue="\#ffffff" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/carrier_entries" android:title="运营商类型" android:key="is_custom_carrier_label" android:dependency="carrier_label_visibility" android:defaultValue="0" android:entryValues="@array/carrier_entry_values" app:dependentValue="0" />
+        <com.wubydax.romcontrol.v2.prefs.MyEditTextPreference android:title="自定义文字" android:key="custom_carrier_label" android:dependency="is_custom_carrier_label" android:defaultValue="Custom Text" />
+    </PreferenceScreen>
+</PreferenceScreen>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceScreen android:title="解锁设置" android:summary="锁屏解锁方式设置">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="加密解锁设置">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="PIN解锁(不用按OK解锁)" android:key="pin_quick_unlock" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="键盘背景颜色" android:key="keypad_jianpan_color" android:summary="选择颜色" android:defaultValue="\#00000000" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="键盘数字颜色" android:key="keypad_shuzi_color" android:summary="选择颜色" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="键盘字母颜色" android:key="keypad_zimu_color" android:summary="选择颜色" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="密码解锁(输入完成立即解锁)" android:key="mima_quick_unlock" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="解锁墨水颜色">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:entries="@array/lockscreen_type_entries" android:title="墨水颜色随机" android:key="random_ink" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="墨水效果" android:key="Ink Effect Static Color" android:summary="选择颜色" android:dependency="random_ink" android:defaultValue="\#ff000000" alphaSlider="true" hexValue="true" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="锁屏文本和图标设置" android:summary="开关、大小位置等设置">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="锁屏营运商设置">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="锁屏营运商" android:key="lockscreen_yys_text_visible" android:defaultValue="0" android:summaryOn="显示" android:summaryOff="隐藏" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="营运商文字颜色" android:key="lockscreen_yys_color" android:summary="选择颜色" android:dependency="lockscreen_yys_text_visible" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.MyEditTextPreference android:title="定制营运商文字或图案" android:key="lockscreen_yys_text" android:dependency="lockscreen_yys_text_visible" android:defaultValue=" " app:packageNameToKill="com.android.systemui" app:isSilent="false" />
+            <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="文本大小" android:key="lockscreen_yys_text_size" android:dependency="lockscreen_yys_text_visible" android:defaultValue="10" app:minValue="0" app:maxValue="22" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="锁屏图标、信息设置">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="相机图标" android:key="set_shortcuts_mode" android:defaultValue="1" android:summaryOn="显示" android:summaryOff="隐藏" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="电话图标" android:key="set_shortcuts_phone" android:defaultValue="1" android:summaryOn="显示" android:summaryOff="隐藏" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="计步器" android:key="lock_additional_steps" android:defaultValue="1" android:summaryOn="显示" android:summaryOff="隐藏" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="所有者信息颜色" android:key="kg_weather_color" android:summary="选择颜色" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="帮助文本、充电信息颜色" android:key="kg_charge_color" android:summary="选择颜色" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="帮助文本" android:key="unlock_text" android:defaultValue="1" android:summaryOn="显示" android:summaryOff="隐藏" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/lockscreen_notif_entries" android:title="锁屏通知个数" android:key="lockscreen_notifications" android:summary="选择显示个数" android:defaultValue="2" android:entryValues="@array/lockscreen_notif_values" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="天气颜色" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="天气开关" android:key="weather_widget" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="温度颜色" android:key="color_temp" android:summary="选择颜色" android:dependency="weather_widget" android:defaultValue="\#ffffffff" app:packageNameToKill="com.android.systemui" app:isSilent="false" alphaSlider="false" hexValue="true" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="高、低气温开关" android:key="temp_low_highe" android:dependency="weather_widget" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" app:packageNameToKill="com.android.systemui" app:isSilent="false" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="最高气温颜色" android:key="color_high_temp" android:summary="选择颜色" android:dependency="temp_low_highe" android:defaultValue="\#ffffffff" app:packageNameToKill="com.android.systemui" app:isSilent="false" alphaSlider="false" hexValue="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="最低气温颜色" android:key="color_low_temp" android:summary="选择颜色" android:dependency="temp_low_highe" android:defaultValue="\#ffffffff" app:packageNameToKill="com.android.systemui" app:isSilent="false" alphaSlider="false" hexValue="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="城市颜色" android:key="color_location" android:summary="选择颜色" android:dependency="weather_widget" android:defaultValue="\#ffffffff" app:packageNameToKill="com.android.systemui" app:isSilent="false" alphaSlider="false" hexValue="true" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="日出开关" android:key="sunrise_invisible" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="日出颜色" android:key="color_sunrise" android:summary="选择颜色" android:dependency="sunrise_invisible" android:defaultValue="\#ffffffff" app:packageNameToKill="com.android.systemui" app:isSilent="false" alphaSlider="false" hexValue="true" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="日落开关" android:key="sunset_invisible" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="日落颜色 " android:key="color_sunset" android:summary="选择颜色" android:dependency="sunset_invisible" android:defaultValue="\#ffffffff" app:packageNameToKill="com.android.systemui" app:isSilent="false" alphaSlider="false" hexValue="true" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="时间日期设置" android:summary="开/关、颜色设置">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="锁屏内容位置" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="锁屏信息居左" android:key="center_clock_toggle" android:defaultValue="0" android:summaryOn="居左显示" android:summaryOff="官方位置" />
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="时间/日期开/关、颜色" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="锁屏日期开/关" android:key="lock_screen_date_and_year" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="启用时间/日期颜色统一" android:key="kg_clock_global_toggle" android:defaultValue="true" android:summaryOn="时间/日期颜色统一" android:summaryOff="时间/日期颜色分开设置" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="时间/日期颜色统一" android:key="kg_clock_global_color" android:summary="选择颜色" android:dependency="kg_clock_global_toggle" android:defaultValue="\#ffffffff" hexValue="true" alphaSlider="true" />
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="时间/日期颜色分开设置" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="时间颜色" android:key="kg_clock_color" android:summary="选择颜色" android:defaultValue="\#ffffffff" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="秒颜色" android:key="kg_seconds_color" android:summary="选择颜色" android:defaultValue="\#ffffffff" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="AM/PM 颜色" android:key="kg_clock_AMPM_color" android:summary="选择颜色" android:defaultValue="\#ffffffff" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="日期颜色" android:key="kg_date_color" android:summary="选择颜色" android:defaultValue="\#ffffffff" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="锁屏农历 " android:key="lockscreen_lunar" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="锁屏农历颜色" android:key="lockscreen_lunar_color" android:summary="选择颜色" android:dependency="lockscreen_lunar" android:defaultValue="\#ffffffff" hexValue="true" alphaSlider="true" />
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="锁屏闹钟" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="锁屏闹钟图标" android:key="next_alarm" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="锁屏闹钟时间颜色" android:key="next_alarm_color" android:summary="选择颜色" android:dependency="next_alarm" android:defaultValue="\#ffffffff" app:packageNameToKill="com.android.systemui" app:isSilent="false" hexValue="true" alphaSlider="true" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="单独时钟模式设置" android:summary="开关、大小、字体设置">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="开关、字体设置" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="锁屏时间显示秒" android:key="lock_seconds" android:defaultValue="false" android:summaryOn="打开" android:summaryOff="关闭" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="时间字体风格" android:key="use_lockscreen_clock_font_style" android:defaultValue="false" android:summaryOn="自定义字体" android:summaryOff="官方字体" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/lockscreen_font_style_entries" android:title="锁屏时钟字体" android:key="lockscreen_clock_font_style" android:summary="%s" android:dependency="use_lockscreen_clock_font_style" android:defaultValue="1" android:entryValues="@array/lockscreen_font_style_values" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="时钟SD卡字体" android:key="use_SD_clock_font" android:defaultValue="false" android:summaryOn="启用Sdcard/fonts（时间字体风格置为官方字体）" android:summaryOff="禁用" />
+        <PreferenceScreen android:title="SD卡目录字体" android:summary="启用外置字体（sdcard/fonts）" android:dependency="use_SD_clock_font" android:defaultValue="false">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体1" app:scriptFileName="time1.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体2" app:scriptFileName="time2.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体3" app:scriptFileName="time3.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体4" app:scriptFileName="time4.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体5" app:scriptFileName="time5.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体6" app:scriptFileName="time6.sh" />
+        </PreferenceScreen>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="锁屏时间大小" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="时间大小设置" android:key="scaling_toggle" android:defaultValue="false" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="时间大小" android:key="lockscreen_clock_scale" android:summary="调节时间大小" android:dependency="scaling_toggle" android:defaultValue="300" app:minValue="10" app:maxValue="400" />
+        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="秒大小" android:key="seconds_clock_scale" android:summary="调节秒大小" android:dependency="scaling_toggle" android:defaultValue="50" app:minValue="10" app:maxValue="150" />
+        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="AM/PM 大小 " android:key="ampm_clock_scale" android:summary="调节 AMPM 大小" android:dependency="scaling_toggle" android:defaultValue="50" app:minValue="10" app:maxValue="150" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="个人信息模式设置" android:summary="开关、大小、字体设置">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="个人信息编辑" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="个人信息" android:key="my_profile_enabled" android:defaultValue="false" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="显示时间" android:key="show_clock" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="文字颜色" android:key="my_profile_text_color" android:summary="选择颜色" android:dependency="my_profile_enabled" android:defaultValue="\#ffffffff" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="背景颜色" android:key="my_profile_background_color" android:summary="选择颜色" android:dependency="my_profile_enabled" android:defaultValue="\#00000000" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.MyEditTextPreference android:title="自定义文字" android:key="my_profile_information" android:summary="选择颜色" android:dependency="my_profile_enabled" android:defaultValue="个人信息" hexValue="true" alphaSlider="true" />
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="秒开/关、字体设置" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="锁屏时间显示秒" android:key="profile_lock_seconds" android:defaultValue="false" android:summaryOn="打开" android:summaryOff="关闭" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="时间字体风格" android:key="use_profile_lockscreen_clock_font_style" android:defaultValue="false" android:summaryOn="自定义字体" android:summaryOff="官方字体" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/lockscreen_font_style_entries" android:title="锁屏时钟字体" android:key="profile_lockscreen_clock_font_style" android:summary="%s" android:dependency="use_profile_lockscreen_clock_font_style" android:defaultValue="1" android:entryValues="@array/lockscreen_font_style_values" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="时钟SD卡字体" android:key="use_SD_profile_clock_font" android:defaultValue="false" android:summaryOn="启用Sdcard/fonts（时间字体风格设置为官方字体）" android:summaryOff="显示官方设置字体" />
+        <PreferenceScreen android:title="SD卡目录字体" android:summary="启用外置字体（sdcard/fonts）" android:dependency="use_SD_profile_clock_font" android:defaultValue="false">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体1" app:scriptFileName="profiletime1.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体2" app:scriptFileName="profiletime2.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体3" app:scriptFileName="profiletime3.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体4" app:scriptFileName="profiletime4.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体5" app:scriptFileName="profiletime5.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体6" app:scriptFileName="profiletime6.sh" />
+        </PreferenceScreen>
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="个人信息字体风格" android:key="kg_myprofile_text_font_style" android:defaultValue="false" android:summaryOn="设置字体" android:summaryOff="显示官方设置字体" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/lockscreen_font_style_entries" android:title="个人信息字体设置" android:key="choose_kg_myprofile_font_style" android:summary="%s" android:dependency="kg_myprofile_text_font_style" android:defaultValue="1" android:entryValues="@array/lockscreen_font_style_values" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="个人信息SD卡字体" android:key="use_SD_profile_font" android:defaultValue="false" android:summaryOn="启用Sdcard/fonts（个人信息字体风格设置为官方字体）" android:summaryOff="禁用" />
+        <PreferenceScreen android:title="SD卡目录字体" android:summary="启用外置字体（sdcard/fonts）" android:dependency="use_SD_profile_font" android:defaultValue="false">
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体1" app:scriptFileName="profile1.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体2" app:scriptFileName="profile2.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体3" app:scriptFileName="profile3.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体4" app:scriptFileName="profile4.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体5" app:scriptFileName="profile5.sh" />
+            <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@drawable/custom_image1" android:title="字体6" app:scriptFileName="profile6.sh" />
+        </PreferenceScreen>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="大小调节" />
+        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="个人信息大小" android:key="my_profile_text_size" android:summary="调节个人信息大小" android:defaultValue="70" app:minValue="30" app:maxValue="100" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="时间大小设置" android:key="profile_scaling_toggle" android:defaultValue="false" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="时间大小" android:key="profile_lockscreen_clock_scale" android:summary="调节时间大小" android:dependency="profile_scaling_toggle" android:defaultValue="150" app:minValue="30" app:maxValue="130" />
+        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="秒大小" android:key="profile_seconds_clock_scale" android:summary="调节秒大小" android:dependency="profile_scaling_toggle" android:defaultValue="50" app:minValue="20" app:maxValue="70" />
+        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="AMPM 大小 " android:key="profile_ampm_clock_scale" android:summary="调节 AMPM 大小" android:dependency="profile_scaling_toggle" android:defaultValue="50" app:minValue="20" app:maxValue="70" />
+    </PreferenceScreen>
+</PreferenceScreen>

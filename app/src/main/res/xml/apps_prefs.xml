@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:title="SuperSu" app:componentName="eu.chainfire.supersu/eu.chainfire.supersu.MainActivity-Material" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:title="WIFI 密码备份" app:componentName="com.vorsk.wifirecovery/com.vorsk.wifirecovery.HomeActivity" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:title="极光设置" app:componentName="com.aurora.advance.settings/com.aurora.advance.settings.MainActivity" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:title="3M电池设置" app:componentName="com.three.minit.minitbatterysettings.free/com.three.minit.minitbatterysettings.MainActivity" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:title="dpi调节" app:componentName="com.wubydax.changedpi/com.wubydax.changedpi.MainActivity" />
+</PreferenceScreen>

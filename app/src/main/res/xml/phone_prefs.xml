@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceScreen android:title="归属地、通话功能设置" android:summary="开关等设置">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="归属地、通话功能设置">
+            <PreferenceScreen android:title="设置归属地" android:summary="通话、信息归属地">
+                <PreferenceCategory android:layout="@layout/preferences_category" android:title="拨号盘归属地设置">
+                    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="拨号盘归属地" android:key="dialer_gui_shu_di" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+                    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="拨号盘归属地文字颜色" android:key="dialer_gui_shu_di_color" android:summary="选择颜色" android:dependency="dialer_gui_shu_di" android:defaultValue="\#ff000000" alphaSlider="true" hexValue="true" />
+                    <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="拨号盘归属地文本大小" android:key="dialer_gui_shu_di_size" android:dependency="dialer_gui_shu_di" android:defaultValue="30" app:minValue="0" app:maxValue="120" />
+                </PreferenceCategory>
+                <PreferenceCategory android:layout="@layout/preferences_category" android:title="通话记录归属地设置">
+                    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="通话记录归属地" android:key="calllog_gui_shu_di" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+                    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="通话记录归属地文字颜色" android:key="calllog_gui_shu_di_color" android:summary="选择颜色" android:dependency="calllog_gui_shu_di" android:defaultValue="\#ff000000" alphaSlider="true" hexValue="true" />
+                    <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="文本大小" android:key="calllog_gui_shu_di_size" android:dependency="calllog_gui_shu_di" android:defaultValue="12" app:minValue="0" app:maxValue="18" />
+                </PreferenceCategory>
+                <PreferenceCategory android:layout="@layout/preferences_category" android:title="信息记录归属地设置">
+                    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="信息记录归属地" android:key="mms_gui_shu_di" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+                    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="信息记录归属地文字颜色" android:key="mms_gui_shu_di_color" android:summary="选择颜色" android:dependency="mms_gui_shu_di" android:defaultValue="\#ff000000" alphaSlider="true" hexValue="true" />
+                    <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="文本大小" android:key="mms_gui_shu_di_size" android:dependency="mms_gui_shu_di" android:defaultValue="12" app:minValue="0" app:maxValue="18" />
+                </PreferenceCategory>
+                <PreferenceCategory android:layout="@layout/preferences_category" android:title="通话中归属地 设置">
+                    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="通话中归属地" android:key="show_phone_location" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+                    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="归属地文字颜色" android:key="inall_gui_shu_di_color" android:summary="选择颜色（默认颜色#b2fafafa）" android:defaultValue="\#b2fafafa" alphaSlider="true" hexValue="true" />
+                </PreferenceCategory>
+            </PreferenceScreen>
+            <PreferenceScreen android:title="通话功能" android:summary="录音、铃声等设置">
+                <PreferenceCategory android:layout="@layout/preferences_category" android:title="自动通话录音">
+                    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="呼入录音" android:key="call_record_in" android:defaultValue="false" android:summaryOn="已启用自动通话录音" android:summaryOff="禁止" />
+                    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="呼出录音" android:key="call_record_out" android:defaultValue="false" android:summaryOn="已启用自动通话录音" android:summaryOff="禁止" />
+                    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="来电铃声音量渐强" android:key="inc_volume_disable" android:defaultValue="false" android:summaryOn="打开" android:summaryOff="禁止" app:packageNameToKill="android.uid.phone" />
+                    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="启用通话接通震动" android:key="call_answer_vib" android:defaultValue="false" android:summaryOn="已启用" android:summaryOff="已禁用" />
+                    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="启用通话挂断震动" android:key="call_end_vib" android:defaultValue="false" android:summaryOn="已启用" android:summaryOff="已禁用" />
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/call_delay_entries" android:title="挂断后界面延迟时间" android:key="call_delay" android:summary="通话結束延时 (毫秒)" android:defaultValue="5000" android:entryValues="@array/call_delay_values" />
+                </PreferenceCategory>
+            </PreferenceScreen>
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="呼入/呼出设置" android:summary="背景、开关、颜色">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="最后通话、短信记录设置" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="隐藏最后通话记录" android:key="last_spoke" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="隐藏最后信息记录" android:key="last_message" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="颜色调节" android:key="last_color_enable" android:defaultValue="false" android:summaryOn="自定义" android:summaryOff="官方" app:packageNameToKill="com.android.incallui" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="最后通话图标颜色" android:key="last_spoke_icon_color" android:summary="选择颜色（官方颜色#ff646464）" android:dependency="last_color_enable" android:defaultValue="\#ff646464" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="最后通话文字颜色" android:key="last_spoke_text_color" android:summary="选择颜色（官方颜色#ff646464）" android:dependency="last_color_enable" android:defaultValue="\#ff646464" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="最后通话时间颜色" android:key="last_spoke_date_color" android:summary="选择颜色（官方颜色#ff646464）" android:dependency="last_color_enable" android:defaultValue="\#ff646464" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="最后短信图标颜色" android:key="last_mms_icon_color" android:summary="选择颜色（官方颜色#ff646464）" android:dependency="last_color_enable" android:defaultValue="\#ff646464" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="最后短信文字颜色" android:key="last_mms_text_color" android:summary="选择颜色（官方颜色#ff949494）" android:dependency="last_color_enable" android:defaultValue="\#ff949494" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="最后短信时间颜色" android:key="last_mms_date_color" android:summary="选择颜色（官方颜色#ff949494）" android:dependency="last_color_enable" android:defaultValue="\#ff949494" hexValue="true" alphaSlider="true" />
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="通话中文字/图标颜色设置" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="启用颜色调节" android:key="incall_bg_color_enable" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="拨号盘数字颜色" android:key="incall_digit_color" android:summary="选择颜色（官方颜色#ff252525）" android:defaultValue="\#ff252525" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="拨号盘字母颜色" android:key="incall_letter_color" android:summary="选择颜色（官方颜色#ffa1a3a5）" android:defaultValue="\#ffa1a3a5" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="来去电号码颜色" android:key="incall_num_color" android:summary="选择颜色（官方颜色#b2fafafa）" android:defaultValue="\#b2fafafa" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="来去电联系人颜色" android:key="incall_name_color" android:summary="选择颜色（官方颜色#fffafafa）" android:defaultValue="\#fffafafa" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="通话时间颜色" android:key="incall_time_color" android:summary="选择颜色（官方颜色#fffafafa）" android:defaultValue="\#fffafafa" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="图标下文字颜色" android:key="button_text_color" android:summary="选择颜色（官方颜色#ff595959）" android:defaultValue="\#ff595959" hexValue="true" alphaSlider="true" />
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="呼入呼出壁纸设置" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="呼入呼出壁纸" android:key="enable_incall_custom_bg" android:defaultValue="false" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/custom_bg_type_entries" android:title="背景类型" android:key="incall_custom_bg_type" android:dependency="enable_incall_custom_bg" android:defaultValue="0" android:entryValues="@array/custom_bg_type_values" />
+        <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference android:title="选择壁纸图片" android:key="incall_bg" android:dependency="enable_incall_custom_bg" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/crop_entries" android:title="壁纸显示类型" android:key="incall_crop_type" android:dependency="enable_incall_custom_bg" android:defaultValue="0" android:entryValues="@array/crop_values" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="一级颜色" android:key="incall_bg_primary_color" android:summary="选择颜色" android:dependency="enable_incall_custom_bg" android:defaultValue="\#00000000" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="二级颜色" android:key="incall_second_gradient_color" android:summary="选择颜色" android:dependency="enable_incall_custom_bg" android:defaultValue="\#00000000" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/gradient_entries" android:title="渐变方向" android:key="incall_bg_gradient_orientation" android:dependency="enable_incall_custom_bg" android:defaultValue="0" android:entryValues="@array/gradient_values" />
+        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="透明度" android:key="incall_opacity" android:dependency="enable_incall_custom_bg" android:defaultValue="255" app:maxValue="255" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="拨号界面设置" android:summary="背景、颜色设置">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="拨号盘壁纸设置" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="拨号盘壁纸" android:key="enable_dialer_custom_bg" android:defaultValue="false" android:summaryOn="底色、键盘、底部背景色调为透明" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/custom_bg_type_entries" android:title="背景类型" android:key="dialer_custom_bg_type" android:dependency="enable_dialer_custom_bg" android:defaultValue="0" android:entryValues="@array/custom_bg_type_values" />
+        <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference android:title="选择壁纸图片" android:key="dialer_image_bg" android:dependency="enable_dialer_custom_bg" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/crop_entries" android:title="壁纸显示类型" android:key="dialer_crop_type" android:dependency="enable_dialer_custom_bg" android:defaultValue="0" android:entryValues="@array/crop_values" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="一级颜色" android:key="dialer_bg_primary_color" android:summary="选择颜色" android:dependency="enable_dialer_custom_bg" android:defaultValue="\#00000000" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="二级颜色" android:key="dialer_second_gradient_color" android:summary="选择颜色" android:dependency="enable_dialer_custom_bg" android:defaultValue="\#00000000" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/gradient_entries" android:title="渐变方向" android:key="dialer_bg_gradient_orientation" android:dependency="enable_dialer_custom_bg" android:defaultValue="0" android:entryValues="@array/gradient_values" />
+        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="透明度" android:key="dialer_opacity" android:dependency="enable_dialer_custom_bg" android:defaultValue="255" app:maxValue="255" />
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="拨号盘颜色设置" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="通话记录拨号按钮" android:key="calllog_icon_visible" android:defaultValue="true" android:summaryOn="显示" android:summaryOff="隐藏" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="启用颜色调节" android:key="dialer_bg_color_enable" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="按键数字颜色" android:key="main_digit_color" android:summary="选择颜色（官方颜色#ff252525）" android:dependency="dialer_bg_color_enable" android:defaultValue="\#ff252525" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="按键字母颜色" android:key="main_letter_color" android:summary="选择颜色（官方颜色#ffa1a3a5）" android:dependency="dialer_bg_color_enable" android:defaultValue="\#ffa1a3a5" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="按键分割线颜色" android:key="main_divider_color" android:summary="选择颜色（官方颜色#ffc6c6c6）" android:dependency="dialer_bg_color_enable" android:defaultValue="\#ffc6c6c6" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="隐藏按钮颜色" android:key="dialer_hide_color" android:summary="选择颜色（官方颜色#ff8f8f8f）" android:dependency="dialer_bg_color_enable" android:defaultValue="\#ff8f8f8f" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="号码显示颜色" android:key="phone_number_color" android:summary="选择颜色（官方颜色#ff252525）" android:dependency="dialer_bg_color_enable" android:defaultValue="\#ff252525" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="删除按钮颜色" android:key="dialer_keypad_del_color" android:summary="选择颜色（官方颜色#ff8e8e8e）" android:dependency="dialer_bg_color_enable" android:defaultValue="\#ff8e8e8e" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="号码显示背景颜色" android:key="phone_number_bg_color" android:summary="选择颜色（官方颜色#fffafafa）" android:dependency="dialer_bg_color_enable" android:defaultValue="\#fffafafa" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="拨号盘背底部景颜色" android:key="dialer_bottom_bg_color" android:summary="选择颜色（官方颜色#fffafafa）" android:dependency="dialer_bg_color_enable" android:defaultValue="\#fffafafa" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="拨号盘键盘背景颜色" android:key="dialer_keypad_bg_color" android:summary="选择颜色（官方颜色#fffafafa）" android:dependency="dialer_bg_color_enable" android:defaultValue="\#fffafafa" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="拨号盘底色颜色" android:key="dialer_home_bg_color" android:summary="选择颜色（官方颜色#fffafafa）" android:dependency="dialer_bg_color_enable" android:defaultValue="\#fffafafa" hexValue="true" alphaSlider="true" />
+    </PreferenceScreen>
+</PreferenceScreen>

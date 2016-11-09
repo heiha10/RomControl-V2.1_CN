@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="其他设置" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="WiFi增强" android:key="wifi_strengthen" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="锁屏旋转" android:key="lockscreen_rotate" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" app:packageNameToKill="com.android.systemui" app:isSilent="false" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="应用360度旋转" android:key="all_rotations" android:summaryOn="启用" android:summaryOff="禁用" app:isSilent="false" app:rebootDevice="true" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="屏幕截图静音" android:key="capture_screen_sound" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="输入法切换图标" android:key="statusbar_ime_invisible" android:defaultValue="true" android:summaryOn="隐藏" android:summaryOff="显示" app:isSilent="false" app:rebootDevice="true" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="省电模式下拉和状态栏通知图标" android:key="power_save_notice" android:summaryOn="隐藏" android:summaryOff="显示" app:isSilent="false" app:rebootDevice="true" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="状态栏私密模式图标" android:key="private_mode_visible" android:summaryOn="显示" android:summaryOff="隐藏" app:isSilent="false" app:rebootDevice="true" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="快速有线充电" android:key="adaptive_fast_charging" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="列表动画" />
+    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/listview_animation_entries" android:title="列表动画" android:key="listview_animation" android:summary="选择动画" android:defaultValue="0" android:entryValues="@array/listview_animation_values" />
+    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/listview_interpolator_entries" android:title="强调" android:key="listview_interpolator" android:summary="选择动画" android:defaultValue="0" android:entryValues="@array/listview_interpolator_values" />
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="全局背景">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="全局背景" android:key="system_background_enable" android:defaultValue="false" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="启用图片背景" android:key="system_background_image" android:dependency="system_background_enable" android:defaultValue="false" android:summaryOn="启用（背景图片在Sdcard/beijing/background.jpg）" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/system_background_gradient_entries" android:title="渐变类型" android:key="system_background_gradient_type" android:summary="背景颜色渐变" android:dependency="system_background_enable" android:defaultValue="0" android:entryValues="@array/system_background_gradient_values" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="背景颜色" android:key="system_background_color" android:summary="选择颜色" android:dependency="system_background_enable" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="二级背景颜色" android:key="system_background_gradient_color" android:summary="选择颜色" android:dependency="system_background_enable" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Spen翻译切换" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="谷歌翻译" android:summary="需要翻墙" app:rebootDevice="true" app:scriptFileName="google.sh" app:rebootOptions="imminent" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="百度翻译" android:summary="有点智障" app:rebootDevice="true" app:scriptFileName="baidu.sh" app:rebootOptions="imminent" />
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="切换型号" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="SM-N9100" android:summary="设备型号显示N9100" app:rebootDevice="true" app:scriptFileName="N9100.sh" app:rebootOptions="imminent" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="SM-N9300" android:summary="设备型号显示N9300(三星应用商店更新的软件较多)" app:rebootDevice="true" app:scriptFileName="N9300.sh" app:rebootOptions="imminent" />
+</PreferenceScreen>

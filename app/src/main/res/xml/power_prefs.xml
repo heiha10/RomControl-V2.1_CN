@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="电源扩展菜单">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="关机" android:key="power_menu_power" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="数据网络模式" android:key="power_menu_data" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="飞行模式" android:key="power_menu_airplane" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="重新启动" android:key="power_menu_restart" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="屏幕截图" android:key="power_menu_screenshot" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="手电筒" android:key="power_menu_flashlight" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="屏幕录制" android:key="power_menu_screenrecord" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="紧急模式" android:key="power_menu_emergency" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="静音/震动/声音模式选项" android:key="power_menu_mode" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+    </PreferenceCategory>
+</PreferenceScreen>

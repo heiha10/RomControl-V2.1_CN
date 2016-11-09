@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Statusbar Clock layout">
+        <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:title="Potato Clock" app:componentName="com.potato.clock.main/com.potato.clock.main.Main" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Two stated preferences test category">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Normal test switch" android:key="normal_test_switch" android:defaultValue="true" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Kill app with dialog switch" android:key="kill_app_with_dialog_test_switch" android:defaultValue="true" android:summaryOn="Enabled" android:summaryOff="Disabled" app:packageNameToKill="com.android.systemui" app:isSilent="false" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Kill app silently test switch" android:key="kill_app_silently_test_switch" android:defaultValue="true" android:summaryOn="Enabled" android:summaryOff="Disabled" app:packageNameToKill="com.android.contacts" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Switch reminding of need to reboot" android:key="reboot_required_test_switch" android:defaultValue="true" android:summaryOn="Enabled" android:summaryOff="Disabled" app:rebootDevice="true" />
+        <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="Kill app checkbox" android:key="test_checkbox_with_kill_app" android:defaultValue="true" android:summaryOn="Enabled" android:summaryOff="Disabled" app:packageNameToKill="com.android.systemui" app:isSilent="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Color pickers test category">
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Normal test color picker" android:key="test_color_preference" android:defaultValue="\#ffccdd" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Color picker with no alpha or hex" android:key="no_alpha_color_key" android:defaultValue="\#ffffff" alphaSlider="false" hexValue="false" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Color picker with app kill" android:key="app_kill_color_key" app:packageNameToKill="com.android.systemui" app:isSilent="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Seekbar preferences (slider preferences)">
+        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Normal slider - no values set" android:key="normal_slider_key" />
+        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Slider with predefined values" android:key="predefined_slider_key" android:dependency="test_checkbox_with_kill_app" android:defaultValue="65" app:minValue="58" app:maxValue="100" app:unitsValue="%" />
+        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Slider with reboot dialog" android:key="slider_with_reboot_dialog" android:defaultValue="255" app:maxValue="255" app:rebootDevice="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Dialog and List preferences">
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/test_list_entries" android:title="Choose items from the list preference" android:key="test_list_key" android:defaultValue="20" android:entryValues="@array/test_list_values" app:dependentValue="1" />
+        <com.wubydax.romcontrol.v2.prefs.MyEditTextPreference android:title="Input custom text" android:key="test_edit_text_key" android:dependency="test_list_key" android:defaultValue="test" />
+        <com.wubydax.romcontrol.v2.prefs.ThumbnailListPreference android:title="Simple thumbnail preference" android:key="test_thumbnail_key" android:defaultValue="1" app:dependentValue="2" app:drawableArray="@array/thumbnail_drawables" app:entryList="@array/thumbnail_items" app:entryValuesList="@array/thumbnail_values" />
+        <com.wubydax.romcontrol.v2.prefs.ThumbnailListPreference android:title="Kill app thumbnail preference" android:key="test_thumbnail_kill_app" android:dependency="test_thumbnail_key" android:defaultValue="2" app:packageNameToKill="com.android.systemui" app:isSilent="false" app:drawableArray="@array/thumbnail_drawables" app:entryList="@array/thumbnail_items" app:entryValuesList="@array/thumbnail_values" />
+        <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference android:title="Select Test App with default" android:key="test_intent_with default" android:defaultValue="com.android.settings/com.android.settings.Settings" app:intentSeparator="/" />
+        <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference android:title="Select app, no default, no search, ## separator" android:key="test_intent_without default" app:showSearch="false" />
+        <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference android:title="Select app and reboot device" android:key="test_intent_without_default" app:intentSeparator="/" app:showSearch="true" app:rebootDevice="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Special preferences" />
+    <PreferenceCategory android:title="Select image preferences">
+        <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference android:title="Select Image 2" android:key="test_image_selection_key_2" />
+        <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference android:title="Select Image" android:key="test_image_selection_key" />
+        <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference android:title="Select Image 3" android:key="test_image_selection_key_3" />
+        <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference android:title="Select Image 4" android:key="test_image_selection_key_4" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="File preferences">
+        <com.wubydax.romcontrol.v2.prefs.FilePreference android:title="New file preference" android:key="new_file" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+        <com.wubydax.romcontrol.v2.prefs.FilePreference android:title="Kill app file preference" android:key="another_file" android:summaryOn="Enabled" android:summaryOff="Disabled" app:packageNameToKill="com.android.systemui" app:isSilent="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Shortcut to apps preferences">
+        <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:summary="Application to browse your files, including root files" app:componentName="com.speedsoftware.rootexplorer/com.speedsoftware.rootexplorer.RootExplorer" />
+        <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:summary="Control samsung's toolbox, turn it on or off, choose available apps and rearrange them" app:componentName="com.wubydax.toolboxsettings/com.wubydax.toolboxsettings.ToolboxSettings" />
+        <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:icon="@mipmap/ic_launcher" android:title="Shortcut to GearTWSwipe" android:summary="Choose what app or shortcut to open when TW launcher is being swiped to the magazine page" app:componentName="com.wubydax.geartwswipe/com.wubydax.geartwswipe.ResetDialogActivity" />
+        <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:title="Chainfire's SuperSu App" android:summary="Manage root permissions for apps and services" app:componentName="eu.chainfire.supersu/eu.chainfire.supersu.MainActivity-Material" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Run script preferences">
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Execute script with prompt" android:summary="This action will throw warning dialog before executing script" app:scriptFileName="simple_test.sh" />
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Execute without prompt" android:summary="This action will execute script without warning" app:scriptFileName="simple_test.sh" app:showConfirmDialog="false" />
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Script with optional reboot" android:summary="This action will write into a file on sd card and show dialog that reminds the user to reboot their phone at this time or later for the action to take effect" app:scriptFileName="simple_test.sh" app:rebootOptions="optional" />
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Script with imminent reboot" android:summary="This action will run script which has reboot command at the end and warn user that reboot of device will follow the script execution immediately" app:scriptFileName="simple_test.sh" app:rebootOptions="imminent" />
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:icon="@mipmap/ic_launcher" android:title="Execute and kill app + icon" android:summary="Upon finishing, this script preference will prompt a user to kill app, since we set the isSilent attribute to false" app:packageNameToKill="com.android.contacts" app:isSilent="false" app:scriptFileName="simple_test.sh" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Open normal intent preferences">
+        <PreferenceScreen android:icon="@drawable/google_ic" android:title="Open google page" android:summary="Using usual preference screen intent to open a web page">
+            <intent android:action="android.intent.action.VIEW" android:data="http://www.google.com" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="Unified TouchWiz guides thread" android:summary="Open the most developed guides thread for TW devices on XDA">
+            <intent android:action="android.intent.action.VIEW" android:data="http://forum.xda-developers.com/showthread.php?t=2799050" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Nested Screen Preferences">
+        <PreferenceScreen android:title="Sub Screen Preferences">
+            <com.wubydax.romcontrol.v2.prefs.ImageHeaderPreference app:imageSource="@drawable/android" />
+            <PreferenceCategory android:title="Sub Test Category">
+                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Sub Test Switch" android:key="sub_test_switch" android:defaultValue="true" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Sub Test color" android:key="sub_test_color" android:defaultValue="\#ffccdd" />
+                <PreferenceScreen android:title="Sub Sub Screen Preferences">
+                    <PreferenceCategory android:title="Sub Sub Test Category">
+                        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Sub Sub Test Switch" android:key="sub_sub_test_switch" android:defaultValue="true" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+                        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Sub Sub Test color" android:key="sub_sub_test_color" android:defaultValue="\#ffccdd" />
+                    </PreferenceCategory>
+                </PreferenceScreen>
+            </PreferenceCategory>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

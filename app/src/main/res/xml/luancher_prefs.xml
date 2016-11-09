@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="天气农历 设置">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="天气农历" android:key="weather_lunar" android:summaryOn="显示" android:summaryOff="隐藏" app:packageNameToKill="com.sec.android.daemonapp" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="桌面空白动作">
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/double_Launcher_entries" android:title="双击桌面功能" android:key="double_tap_Launcher" android:summary="s%" android:entryValues="@array/double_Launcher_values" app:packageNameToKill="com.sec.android.app.launcher" />
+        <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference android:title="双击桌面自定义程序" android:key="double_tap_launcher_app" android:summary="双击桌面功能选择自定义程序" includeSearch="true" setSeparatorString="\##" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/up_Launcher_entries" android:title="上滑桌面功能" android:key="swipe_up_Launcher" android:summary="s%" android:entryValues="@array/up_Launcher_values" app:packageNameToKill="com.sec.android.app.launcher" />
+        <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference android:title="上滑桌面自定义程序" android:key="swipe_up_launcher_app" android:summary="双击桌面功能选择自定义程序" includeSearch="true" setSeparatorString="\##" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/down_Launcher_entries" android:title="下滑桌面功能" android:key="swipe_down_Launcher" android:summary="s%" android:entryValues="@array/down_Launcher_values" app:packageNameToKill="com.sec.android.app.launcher" />
+        <com.wubydax.romcontrol.v2.prefs.IntentDialogPreference android:title="下滑桌面自定义程序" android:key="swipe_down_launcher_app" android:summary="双击桌面功能选择自定义程序" includeSearch="true" setSeparatorString="\##" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="桌面特效">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="页面循环滚动" android:key="page_scroll" android:summary="页面可以循环滚动" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="图标阴影" android:key="icon_shadow" android:summary="图标下方显示阴影" android:defaultValue="true" android:summaryOn="启用" android:summaryOff="禁用" app:packageNameToKill="com.sec.android.app.launcher" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="禁用壁纸循环滚动" android:key="toggle_scrolling_wallpaper" android:summary="壁纸随页面滚动" android:defaultValue="true" android:summaryOn="打开" android:summaryOff="关闭" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="免费主题" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="启用主题免费" android:summary="安装付费主题试用，然后点击此处" app:isSilent="false" app:rebootDevice="true" app:scriptFileName="themedisable.sh" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="禁用主题免费" android:summary="点击此处可正常安装主题" app:isSilent="false" app:rebootDevice="true" app:scriptFileName="themeenable.sh" />
+</PreferenceScreen>
